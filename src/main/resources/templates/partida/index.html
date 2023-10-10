@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>oneBasketball - Partidas</title>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo">oneBasketball</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="/partida">histórico</a></li>
+                <li><a href="#">Registrar Partida</a></li>
+                <li><a href="#">Times</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <h2>Registro de Partidas</h2>
+
+        <div class="col s12 m7">
+            <!--<h2 class="header">Horizontal Card</h2> -->
+            <div class="card horizontal" th:each="partida : ${partida}">
+                <div class="card-image">
+                    <img src="https://lorempixel.com/100/190/nature/6">
+                </div>
+                <div class="card-stacked">
+                    <div class="card-content">
+                        <span class="card-tittle" th:text="${partida.team1} + ${partida.team2}"></span>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Mais detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+</body>
+
+</html>
