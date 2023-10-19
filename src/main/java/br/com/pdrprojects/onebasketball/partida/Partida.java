@@ -21,10 +21,10 @@ public class Partida {
     @NotBlank
     String team2;
 
-    @Positive
+    @Positive(message="{partida.points.positive}")
     Integer pontosTeam1;
 
-    @Positive
+    @Positive(message="{partida.points.positive}")
     Integer pontosTeam2;
 
 }

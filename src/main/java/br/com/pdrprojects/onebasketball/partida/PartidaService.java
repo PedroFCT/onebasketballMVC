@@ -23,4 +23,8 @@ public class PartidaService {
         return true;
     }
 
+    public void save(Partida partida) {
+        repository.save(partida);
+    }
+
 }
